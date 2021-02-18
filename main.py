@@ -33,7 +33,7 @@ async def on_message(message):
 
   # 3. Provide a list of commands that are available
   elif message.content.lower().startswith('$help') or message.content.lower().startswith('$commands'):
-    await message.channel.send(f'{config.game_details()}')
+    await message.channel.send(config.game_details())
 
   # 4. Set the active game with $setgame
   elif message.content.lower().startswith('$setgame'):
