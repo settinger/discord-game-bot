@@ -40,6 +40,8 @@ async def on_message(message):
     payload = message.content.lower()[9:]
     haveNewGame = setGame(payload)
     if haveNewGame:
+      # Run the init() method
+      config.currRules['init']()
       await message.channel.send(f"Active game has been set to **{config.currGame}**.")
     else:
       await message.channel.send(f"No game was found with that title. {config.available_games()}")

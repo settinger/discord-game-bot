@@ -57,7 +57,7 @@ async def DM(message):
     config.players[message.author.name] = normalized(message.content)
     await message.author.send(f"Your topic `{config.players[message.author.name]}` has been recorded.")
     
-
+gameDict['init'] = init
 gameDict['$newgame'] = newgame
 gameDict['$newround'] = newround
 gameDict['DM'] = DM
